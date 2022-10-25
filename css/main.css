@@ -94,10 +94,12 @@ h1 {
   font-size: 120px;
 }
 
+p {
+  font-weight: 300;
+}
 p.sm {
   font-size: 17px;
   line-height: 22px;
-  font-weight: 300;
 }
 
 main {
@@ -495,7 +497,13 @@ table tbody tr:after {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.intro .list {
+  margin: 0 0 90px;
+}
 
+.list {
+  margin: 30px 0 130px;
+}
 .list h2 {
   margin-bottom: 56px;
 }
@@ -564,8 +572,11 @@ table tbody tr:after {
   max-width: 1000px;
   margin-bottom: 55px;
 }
-.info__inner-text h2 {
+.info__inner h2 {
   margin-bottom: 40px;
+}
+.info__inner p {
+  font-weight: 500;
 }
 
 .hero {
@@ -715,6 +726,7 @@ table tbody tr:after {
   position: relative;
   background-color: #006483;
   color: #fff;
+  cursor: pointer;
 }
 .faqItem__button.tabBtn.active span {
   -webkit-transform: translateY(-50%) rotate(180deg);
@@ -756,17 +768,16 @@ table tbody tr:after {
      object-fit: contain;
 }
 .faqItem__content {
-  padding: 106px 28px 20px;
   background-color: #C5D0D5;
 }
-.faqItem__content.tabEVent {
-  max-height: 0;
-  overflow: hidden;
+.faqItem__content.tabEvent {
+  display: none;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
+  padding: 106px 28px 20px;
 }
-.faqItem__content.tabEVent.active {
-  max-height: 2000px;
+.faqItem__content.tabEvent.active {
+  display: block;
 }
 .faqItem__content-info {
   display: -webkit-box;

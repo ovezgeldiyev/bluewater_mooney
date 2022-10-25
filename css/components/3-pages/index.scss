@@ -1,19 +1,23 @@
 .hero {
     background: url("../images/main.jpg") no-repeat center;
     background-size: cover;
+
     &.ship {
         background: url("../images/main-2.jpg") no-repeat center;
         background-size: cover;
     }
+
     &.journey {
         background: url("../images/main-3.jpg") no-repeat center;
         background-size: cover;
     }
+
     &.active {
         .hero__bg {
             opacity: 1;
         }
     }
+
     &__bg {
         display: flex;
         justify-content: center;
@@ -25,10 +29,12 @@
         height: 100%;
         opacity: 0;
         transition: .3s ease;
+
         img {
             @include fullImage;
         }
     }
+
     &__inner {
         display: flex;
         flex-direction: column;
@@ -42,13 +48,16 @@
             align-items: center;
             width: 266px;
             transition: .3s ease;
+
             &.active {
                 opacity: 0;
             }
+
             img {
                 width: 100%;
             }
         }
+
         p {
             position: absolute;
             z-index: 9;
@@ -59,62 +68,55 @@
         }
     }
 }
+
 // 1380px
 @mixin hero-xxxlg-xxxxlg {
-    .hero {
-
-    }
+    .hero {}
 }
+
 // 1250px
 @mixin hero-xlg-xxlg-extra {
-    .hero {
-
-    }
+    .hero {}
 }
+
 // 1180px
 @mixin hero-xlg-xxlg {
-    .hero {
-
-    }
+    .hero {}
 }
+
 // 1024px
 @mixin hero-lg-xlg {
-    .hero {
-
-    }
+    .hero {}
 }
+
 // 930px
 @mixin hero-md-lg {
-    .hero {
-  
-    }
+    .hero {}
 }
+
 // 750px
 @mixin hero-sm-md {
-    .hero {
- 
-    }
+    .hero {}
 }
+
 // 650px
 @mixin hero-sm-md-extra {
-    .hero {
-
-    }
+    .hero {}
 }
+
 // 540px
 @mixin hero-xsm-sm {
-    .hero {
-
-    }
+    .hero {}
 }
+
 // 440px
 @mixin hero-xxsm-xsm {
-    .hero {
-
-    }
+    .hero {}
 }
-.info {
+
+.about {
     padding: 300px 0 110px;
+
     &__inner {
         display: flex;
         flex-wrap: wrap;
@@ -125,32 +127,122 @@
             width: calc(50% - 30px);
             max-width: 660px;
         }
+
         &-image {
             width: calc(50% - 30px);
             max-width: 660px;
             display: flex;
             justify-content: center;
             align-items: center;
+
             img {
                 width: 100%;
             }
         }
+
         h2 {
             width: 100%;
             margin-bottom: 48px;
         }
+
         p {
             font-weight: 300;
         }
     }
 }
-.tabBtn {
-    span {
-        transition: .3s ease;
-    }
-    &.active {
-        span {
-            transform: translateY(-50%) rotate(180deg);
+
+.faq {
+    &Item {
+        margin-bottom: 27px;
+
+        &:last-child {
+            margin-bottom: 0;
         }
+
+        &__button {
+            padding: 10px 28px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            background-color: $primary;
+            color: $white;
+            cursor: pointer;
+            &.tabBtn {
+                &.active {
+                    span {
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
+            &-text {
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+            }
+
+            span {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                right: 23px;
+                transform: translateY(-50%);
+                transition: .3s ease;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        &__content {
+            background-color: $lightBlue;
+            &.tabEvent {
+                display: none;
+                transition: .6s ease;
+                padding: 106px 28px 20px;
+
+                &.active {
+                    display: block;
+
+                }
+            }
+            &-info {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 166px;
+
+                p {
+                    width: calc(50% - 20px);
+                    max-width: 670px;
+                    font-weight: 300;
+                    letter-spacing: 0.5px;
+                }
+
+                &-image {
+                    width: calc(50% - 20px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: -28px;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            h2 {
+                margin-bottom: 74px;
+            }
+        }
+
+    
     }
 }
