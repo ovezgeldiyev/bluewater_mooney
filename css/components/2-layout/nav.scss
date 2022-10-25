@@ -1,51 +1,105 @@
 .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    background-color: rgba($primary, 0.8);
+    transform: translateX(100%);
+    @include transition;
+    &.active {
+        @include transformReset;
+    }
     &__inner {
+        position: absolute;
         display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: unset;
         align-items: center;
+        box-sizing: border-box;
+        top: 50%;
+        left: 50%;
+        width: 220px;
+        z-index: 1;
+        padding: 20px;
+        overflow-y: auto;
+        transform: translate(-50%, -50%);
+        a {
+            padding: 5px;
+            color: $white;
+            font-weight: 300;
+        }
+        li {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:last-child {
+                :last-child {
+                    margin: 0;
+                }
+            }
+        }
     }
 }
 .burger {
-    display: none;
     cursor: pointer;
     @include transition;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 55px;
+    height: 40px;
+    z-index: 9;
     &:hover {
         opacity: .8;
     }
     &::before {
-        top: 20%;
+        top: 0%;
         width: 100%;
         height: 3px;
-        background-color: $black;
+        background-color: $white;
         transition: all 0.3s ease;
         content: "";
         position: absolute;
         left: 50%;
         @include transformX;
+        border-radius: 3px;
     }
     span {
-        top: 50%;
+        top: 35%;
         width: 100%;
         height: 3px;
-        background-color: $black;
+        background-color: $white;
         transition: all 0.3s ease;
         position: absolute;
         left: 50%;
-        @include transform;
         @include transition;
+        border-radius: 3px;
+        transform: translate(-50%, -35%);
+        &:last-of-type {
+            top: 65%;
+            transform: translate(-50%, -65%);
+        }
+    }
+    p {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 100%;
     }
     &::after {
-        bottom: 20%;
+        bottom: 0%;
         width: 100%;
         height: 3px;
-        background-color: $black;
+        background-color: $white;
         transition: all 0.3s ease;
         content: "";
         position: absolute;
         left: 50%;
         @include transformX;
+        border-radius: 3px;
+
     }
     &.active {
         &::before {
@@ -96,9 +150,6 @@
             overflow-y: auto;
             background: #FEFEFE;
         }
-    }
-    .burger {
-        display: block;
     }
 }
 // 540px
