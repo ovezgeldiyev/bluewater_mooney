@@ -21,7 +21,8 @@
         box-sizing: border-box;
         top: 50%;
         left: 50%;
-        width: 220px;
+        width: 100%;
+        max-width: 500px;
         z-index: 1;
         padding: 20px;
         overflow-y: auto;
@@ -87,6 +88,10 @@
         top: calc(100% + 8px);
         left: 0;
         width: 100%;
+        &.close {
+            opacity: 0;
+            transition: .3s ease;
+        }
     }
     &::after {
         bottom: 0%;
@@ -114,6 +119,12 @@
             bottom: 50%;
             -webkit-transform: translate(-50%, 50%) rotate(-45deg);
             transform: translate(-50%, 50%) rotate(-45deg);
+        }
+        p{ 
+            opacity: 0;
+            &.close {
+                opacity: 1;
+            }
         }
     }
 }
