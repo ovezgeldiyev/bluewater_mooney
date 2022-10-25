@@ -1,6 +1,10 @@
 .hero {
     background: url("../images/main.jpg") no-repeat center;
     background-size: cover;
+    &.ship {
+        background: url("../images/main-2.jpg") no-repeat center;
+        background-size: cover;
+    }
     &.journey {
         background: url("../images/main-3.jpg") no-repeat center;
         background-size: cover;
@@ -51,6 +55,7 @@
             bottom: 4%;
             left: 50%;
             transform: translateX(-50%);
+            color: $white;
         }
     }
 }
@@ -106,5 +111,46 @@
 @mixin hero-xxsm-xsm {
     .hero {
 
+    }
+}
+.info {
+    padding: 300px 0 110px;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &-content {
+            width: calc(50% - 30px);
+            max-width: 660px;
+        }
+        &-image {
+            width: calc(50% - 30px);
+            max-width: 660px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+            }
+        }
+        h2 {
+            width: 100%;
+            margin-bottom: 48px;
+        }
+        p {
+            font-weight: 300;
+        }
+    }
+}
+.tabBtn {
+    span {
+        transition: .3s ease;
+    }
+    &.active {
+        span {
+            transform: translateY(-50%) rotate(180deg);
+        }
     }
 }

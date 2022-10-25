@@ -54,6 +54,9 @@ body {
   line-height: 27px;
   font-weight: 500;
   background: $white;
+  &.active {
+    overflow: hidden;
+  }
 }
 a {
   text-decoration: none;
