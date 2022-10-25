@@ -23,7 +23,11 @@ h6 {
 
 }
 p {
-
+    &.sm {
+        font-size: 17px;
+        line-height: 22px;
+        font-weight: 300;
+    }
 }
 main {
     overflow: hidden;

@@ -55,12 +55,12 @@ Global Settings
 ====================================================================
    ***/
 body {
-  font-family: "Inter", sans-serif;
-  font-size: 21px;
+  font-family: "West", sans-serif;
+  font-size: 20px;
   color: #fff;
-  line-height: 40px;
-  font-weight: 400;
-  background: #000;
+  line-height: 27px;
+  font-weight: 500;
+  background: #fff;
 }
 
 a {
@@ -81,7 +81,7 @@ ul li {
 
 .auto__container {
   position: relative;
-  max-width: 1250px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -89,6 +89,12 @@ ul li {
 h1 {
   font-weight: 700;
   font-size: 120px;
+}
+
+p.sm {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 300;
 }
 
 main {
@@ -112,7 +118,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 9;
 }
 .header.sticky {
   position: fixed;
@@ -125,13 +131,13 @@ main {
           animation-duration: 0.4s;
 }
 .header__inner {
-  padding: 30px 0;
+  padding: 110px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -146,7 +152,13 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 320px;
+  width: 116px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 9;
 }
 .header__inner-logo img {
   width: 100%;
@@ -173,33 +185,93 @@ main {
     opacity: 1;
   }
 }
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  background-color: rgba(0, 100, 131, 0.8);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.nav.active {
+  transform: translate(0, 0);
+  -moz-ransform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+}
 .nav__inner {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  z-index: 1;
+  padding: 20px;
+  overflow-y: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.nav__inner a {
+  padding: 5px;
+  color: #fff;
+  font-weight: 300;
+}
+.nav__inner li {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+.nav__inner li:last-child :last-child {
+  margin: 0;
+}
 
 .burger {
-  display: none;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 55px;
+  height: 40px;
+  z-index: 9;
 }
 .burger:hover {
   opacity: 0.8;
 }
 .burger::before {
-  top: 20%;
+  top: 0%;
   width: 100%;
   height: 3px;
-  background-color: #000;
+  background-color: #fff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   content: "";
@@ -210,30 +282,40 @@ main {
   -o-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
+  border-radius: 3px;
 }
 .burger span {
-  top: 50%;
+  top: 35%;
   width: 100%;
   height: 3px;
-  background-color: #000;
+  background-color: #fff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
-  -moz-ransform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
+  border-radius: 3px;
+  -webkit-transform: translate(-50%, -35%);
+          transform: translate(-50%, -35%);
+}
+.burger span:last-of-type {
+  top: 65%;
+  -webkit-transform: translate(-50%, -65%);
+          transform: translate(-50%, -65%);
+}
+.burger p {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
 }
 .burger::after {
-  bottom: 20%;
+  bottom: 0%;
   width: 100%;
   height: 3px;
-  background-color: #000;
+  background-color: #fff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   content: "";
@@ -244,6 +326,7 @@ main {
   -o-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
+  border-radius: 3px;
 }
 .burger.active::before {
   top: 50%;
@@ -257,6 +340,55 @@ main {
   bottom: 50%;
   -webkit-transform: translate(-50%, 50%) rotate(-45deg);
   transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.hero {
+  background: url("../images/main.jpg") no-repeat center;
+  background-size: cover;
+}
+.hero__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+.hero__inner-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 266px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.hero__inner-logo.active {
+  opacity: 0;
+}
+.hero__inner-logo img {
+  width: 100%;
+}
+.hero__inner p {
+  position: absolute;
+  z-index: 9;
+  bottom: 4%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 @media (max-width: 1024px) {
