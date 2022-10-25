@@ -33,6 +33,10 @@ table {
 
   td {
     padding: 9px 28px;
+    width: 70%;
+    &:nth-child(2) {
+      width: 30%;
+    }
   }
   tbody {
     tr {
@@ -90,7 +94,7 @@ table {
 
 .faq {
   &__inner {
-    .faqItems {
+    .faqItem {
       &__button {
         padding: 10px 28px;
         display: flex;
@@ -153,24 +157,73 @@ table {
   }
 }
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: -13px -15px;
-  &__item {
-    width: calc(33.3% - 30px);
-    margin: 13px 15px; 
-    &-image {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 44px;
+    &:last-child {
+      margin-bottom: unset;
+    }
+    &:first-child {
+      margin-bottom: 122px;
+    }
+  }
+  h3 {
+    padding: 9px 28px;
+    font-weight: 500;
+    background-color: $primary;
+    margin-bottom: 32px;
+    color: $white;
+  }
+  .galleryItem {
+    width: calc(33.3% - 19px);
+    &__image {
       position: relative;
-      padding-bottom: 63%;
+      width: 100%;
+      padding-bottom: 62%;
+      margin-bottom: 10px;
       img {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
+    }
+    a {
+      color: $black;
+      font-size: 13px;
+    }
+  }
+  &.sm {
+    .gallery {
+      &__row {
+        margin-bottom: 26px;
+        &:last-child {
+          margin-bottom: unset;
+        }
+        .galleryItem {
+            width: calc(33.3% - 30px);
+            &__image {
+              padding-bottom: 64%;
+              margin-bottom: unset;
+            }
+          }
+      }
+      
+    }
+  }
+}
+.info {
+  &__inner {
+    &-text {
+      h2 {
+        margin-bottom: 40px;
+      }
+      max-width: 1000px;
+      margin-bottom: 55px;
     }
   }
 }
