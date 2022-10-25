@@ -1,11 +1,25 @@
 // menu start
 var menu = document.getElementById("menu");
 var menuBtn = document.getElementById("menuBtn");
+const headerLogo = document.getElementById("headerLogo");
+const heroLogo = document.getElementById("heroLogo");
+const hero = document.getElementById("hero");
+
 var body = document.body;
 menuBtn.onclick = function () {
   menu.classList.toggle("active");
   menuBtn.classList.toggle("active");
   body.classList.toggle("active");
+  if(headerLogo){
+    headerLogo.classList.toggle("active");
+  }
+  if(heroLogo){
+    heroLogo.classList.toggle("active");
+  }
+  if(hero){
+    hero.classList.toggle("active");
+
+  }
 };
 window.onclick = function (event) {
   if (event.target == menu) {

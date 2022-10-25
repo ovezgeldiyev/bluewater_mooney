@@ -27,6 +27,14 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: 9;
+      transition: .3s ease;
+      &#headerLogo {
+        opacity: 0;
+        &.active {
+          opacity: 1;
+        }
+      }
+    
       img {
         width: 100%;
       }
