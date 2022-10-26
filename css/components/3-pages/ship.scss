@@ -12,7 +12,9 @@
             h2 {
                 margin-bottom: 42px;
             }
-
+            p {
+                font-weight: 500;
+            }
             &-image {
                 width: 50%;
                 max-width: 300px;
@@ -47,8 +49,6 @@
             margin-bottom: 40px;
         }
 
-        p {
-            font-weight: 500;
-        }
+      
     }
 }

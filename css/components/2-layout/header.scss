@@ -4,14 +4,6 @@
   left: 0;
   width: 100%;
   z-index: 9;
-  &.sticky  {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   animation-name: sticky;
-   animation-duration: .4s;
-  }
   &__inner {
     padding: 110px 0;
     display: flex;
@@ -41,16 +33,40 @@
     }
   }
 }
+// 1250px
+@mixin header-xlg-xxlg-extra {
+  .header {
+    &__inner {
+      padding: 80px 0;
+    }
+  }
+}
+// 1180px
+@mixin header-xlg-xxlg {
+  .header {
+    &__inner {
+      padding: 60px 0;
+    }
+  }
+}
 // 1024px
 @mixin header-lg-xlg {
     .header {
-    
+      &__inner {
+        padding: 30px 0;
+        &-logo {
+          top: 20px;
+          width: 100px;
+        }
+      }
     }
 }
 // 540px
 @mixin header-xsm-sm {
     .header {
-    
+      &__inner {
+          padding: 20px 0;
+      }
     }
 }
 @keyframes sticky {

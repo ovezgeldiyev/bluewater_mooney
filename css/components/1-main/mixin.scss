@@ -98,6 +98,16 @@
     @content;
   }
 }
+@mixin sm-md-h-extra {
+  @media (max-height: 600px) {
+    @content;
+  }
+}
+@mixin sm-md-h {
+  @media (max-height: 850px) {
+    @content;
+  }
+}
 @mixin md-lg-extra {
   @media (max-width: 840px) {
     @content;

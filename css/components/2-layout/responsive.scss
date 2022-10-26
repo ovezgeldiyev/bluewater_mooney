@@ -1,48 +1,76 @@
-// 1450px
-@include xxxxlg-xxxxxlg {
-    // @include hero-xxxxlg-xxxxxlg;
-}
-// 1380px
-@include xxxlg-xxxxlg {
-    @include hero-xxxlg-xxxxlg;
-}
 // 1250px
 @include xlg-xxlg-extra {
-    @include hero-xlg-xxlg-extra;
+    @include header-xlg-xxlg-extra;
+    @include footer-xlg-xxlg-extra;
+
 }
 // 1180px
 @include xlg-xxlg {
+    .auto__container {
+        padding: 0 30px;
+    }
     @include hero-xlg-xxlg;
+    @include header-xlg-xxlg;
+    @include about-xlg-xxlg;
 }
 // 1024px
 @include lg-xlg {
     ::-webkit-scrollbar{
         display: none;
     }
+    .auto__container {
+        padding: 0 20px;
+    }
     @include hero-lg-xlg;
+    @include header-lg-xlg;
+    @include nav-lg-xlg;
+    @include about-lg-xlg;
+
+    @include footer-lg-xlg;
 }
 // 930px
 @include md-lg {
-    @include hero-md-lg;
+    @include about-md-lg;
+    @include footer-md-lg;
+
+}
+// 850px max-height
+@include sm-md-h {
+    @include nav-sm-md-h;
+}
+// 600px max-height
+@include sm-md-h-extra {
+    @include nav-sm-md-h-extra;
+}
+// 840px
+@include md-lg-extra {
+    @include about-md-lg-extra;
+
 }
 // 750px
 @include sm-md {
-    @include hero-sm-md;
+    @include about-sm-md;
+    @include footer-sm-md;
 }
 // 650px
 @include sm-md-extra {
-    @include hero-sm-md-extra;
+    @include footer-sm-md-extra;
+
 }
 // 540px
 @include xsm-sm  {
     @include hero-xsm-sm;
+    @include header-xsm-sm;
+    @include about-xsm-sm;
+    @include footer-xsm-sm;
 }
 // 440px
 @include xxsm-xsm  {
-    @include hero-xxsm-xsm;
+    @include footer-xxsm-xsm;
+
 }
 // 390px
 @include xxxsm-xxsm  {
-    // @include hero-xxxsm-xxsm;
+    @include footer-xxxsm-xxsm;
 }
 
