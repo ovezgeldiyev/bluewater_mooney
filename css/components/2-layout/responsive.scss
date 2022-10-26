@@ -12,26 +12,79 @@
     @include hero-xlg-xxlg;
     @include header-xlg-xxlg;
     @include about-xlg-xxlg;
+    @include faq-xlg-xxlg;
 }
 // 1024px
 @include lg-xlg {
-    ::-webkit-scrollbar{
-        display: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .gallery {
+    &__row {
+      margin-bottom: 35px;
+      &:first-child {
+        margin-bottom: 70px;
+      }
     }
-    .auto__container {
-        padding: 0 20px;
+    &Item {
+      width: calc(33.3% - 10px);
     }
-    @include hero-lg-xlg;
-    @include header-lg-xlg;
-    @include nav-lg-xlg;
-    @include about-lg-xlg;
+    h3 {
+      margin-bottom: 25px;
+    }
+    &.sm {
+      .gallery {
+          &__row{
+              margin-bottom: 15px;
+          }
+        &Item {
+          width: calc(33.3% - 10px);
+        }
+      }
+    }
+  }
+  h2 {
+    font-size: 27px;
+    line-height: 34px;
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .auto__container {
+    padding: 0 25px;
+  }
+  .list {
+    margin-bottom: 100px;
+    h2 {
+      margin-bottom: 45px;
+    }
+  }
+  @include hero-lg-xlg;
+  @include intro-lg-xlg;
+  @include faq-lg-xlg;
+  @include about-lg-xlg;
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include footer-lg-xlg;
 
-    @include footer-lg-xlg;
+
 }
 // 930px
 @include md-lg {
-    @include about-md-lg;
-    @include footer-md-lg;
+  @include faq-md-lg;
+  @include about-md-lg;
+  @include footer-md-lg;
+
+}
+// 840px
+@include md-lg-extra{
+    @include faq-md-lg-extra;
+    @include about-md-lg-extra;
 
 }
 // 850px max-height
@@ -42,35 +95,153 @@
 @include sm-md-h-extra {
     @include nav-sm-md-h-extra;
 }
-// 840px
-@include md-lg-extra {
-    @include about-md-lg-extra;
-
-}
 // 750px
 @include sm-md {
-    @include about-sm-md;
-    @include footer-sm-md;
+  .gallery {
+    &__row {
+      margin-bottom: 25px;
+    }
+    .galleryItem {
+      width: calc(33.3% - 5px);
+      a {
+        font-size: 12px;
+      }
+    }
+    h3 {
+      padding: 8px 20px;
+      margin-bottom: 20px;
+    }
+    &.sm {
+        .gallery {
+            &__row{
+                margin-bottom: 8px;
+            }
+          &Item {
+            width: calc(33.3% - 5px);
+          }
+        }
+      }
+  }
+  table {
+    td {
+      padding: 8px 20px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  .list {
+    margin-bottom: 70px;
+    h2 {
+      margin-bottom: 35px;
+    }
+  }
+  @include intro-sm-md;
+  @include faq-sm-md;
+  @include about-sm-md;
+  @include footer-sm-md;
+
 }
 // 650px
 @include sm-md-extra {
-    @include footer-sm-md-extra;
+  table {
+    td {
+      padding: 7px 15px;
+    }
+  }
+  @include info-sm-md-extra;
+  @include faq-sm-md-extra;
+  @include footer-sm-md-extra;
 
 }
 // 540px
-@include xsm-sm  {
-    @include hero-xsm-sm;
-    @include header-xsm-sm;
-    @include about-xsm-sm;
-    @include footer-xsm-sm;
+@include xsm-sm {
+  body {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .auto__container {
+    padding: 0 20px;
+  }
+  .gallery {
+    &__row {
+      margin-bottom: 0;
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+    .galleryItem {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 15px;
+      &:last-child {
+        margin-bottom: 25px;
+      }
+    }
+    h3 {
+      padding: 7px 15px;
+    }
+    &.sm{
+        .gallery{
+            &__row{
+                margin: unset;
+                .galleryItem{
+                    &:last-child{
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            &Item{
+                width: 100%;
+            }
+        }
+    }
+  }
+  h2 {
+    font-size: 25px;
+    line-height: 32px;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  table {
+    td {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .list {
+    margin: 20px 0 50px;
+  }
+  .burger {
+    width: 38px;
+    height: 26px;
+    p {
+      font-size: 15px;
+      line-height: 17px;
+    }
+  }
+  @include hero-xsm-sm;
+  @include intro-xsm-sm;
+  @include faq-xsm-sm;
+  @include about-xsm-sm;
+  @include header-xsm-sm;
+  @include footer-xsm-sm;
+
+
 }
 // 440px
-@include xxsm-xsm  {
-    @include footer-xxsm-xsm;
+@include xxsm-xsm {
+  @include footer-xxsm-xsm;
 
 }
 // 390px
-@include xxxsm-xxsm  {
-    @include footer-xxxsm-xxsm;
-}
+@include xxxsm-xxsm {
+  .auto__container {
+    padding: 0 15px;
+  }
+  
+  @include faq-xxxsm-xxsm;
+  @include footer-xxxsm-xxsm;
 
+}

@@ -1,14 +1,13 @@
 .intro {
     &__inner {
         padding-top: 100px;
-
         &-info {
             display: flex;
             align-items: flex-end;
             padding: 12px 15px 25px;
             background-color: $gray;
             margin-bottom: 50px;
-
+            
             h2 {
                 margin-bottom: 42px;
             }
@@ -34,8 +33,81 @@
     }
 }
 
+// 1024px
+@mixin intro-lg-xlg{
+    .intro{
+        &__inner{
+            padding-top: 70px;
+            
+        }
+        .list{
+            margin-bottom: 70px;
+        }
+      
+    }
+}
+
+// 750px
+@mixin intro-sm-md{
+    .intro{
+        &__inner{
+            padding-top: 60px;
+            &-info{
+                margin-bottom: 40px;
+                h2{
+                    margin-bottom: 25px;
+                }
+                &-image{
+                    margin-left: 50px;
+                    min-width: 180px;
+                }
+            }
+
+        }
+        .list{
+            margin-bottom: 40px;
+            h2{
+                margin-bottom:40px ;
+            }
+        }
+    }
+}
 
 
+// 540px
+@mixin intro-xsm-sm{
+    .intro{
+        &__inner{
+            padding-top: 40px;
+            &-info{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 12px 15px 15px;
+                margin-bottom: 30px;
+                h2{
+                    margin-bottom: 20px;
+                }
+                p{
+                    margin-bottom: 20px;
+                }
+                &-image{
+                    margin-left: unset;
+                    width: 100%;
+                    max-width: 250px;
+                }
+            }
+        }
+        .list{
+            margin-bottom: 30px;
+            h2{
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+}
 
 
 .info {
@@ -51,4 +123,17 @@
 
       
     }
+  
+}
+// 650px
+@mixin info-sm-md-extra{
+.info{
+    &__inner{
+        &-text{
+            h2{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
 }

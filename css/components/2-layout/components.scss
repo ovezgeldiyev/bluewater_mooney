@@ -4,7 +4,10 @@ h2 {
     color: $black;
     font-weight: 800;
 }
-
+h3{
+    font-size: 20px;
+    line-height: 38px;
+}
 p {
     font-weight: 300;
 
@@ -21,7 +24,7 @@ main {
 table {
     width: 100%;
     border-collapse: collapse;
-
+    min-width: 400px;
     td {
         padding: 9px 28px;
         width: 70%;
@@ -57,9 +60,12 @@ table {
 
 .list {
     margin: 30px 0 130px;
-
     h2 {
         margin-bottom: 56px;
+    }
+    &__table{
+    overflow: auto;
+
     }
 }
 
@@ -121,13 +127,14 @@ table {
                     margin-bottom: unset;
                 }
 
-                .galleryItem {
-                    width: calc(33.3% - 30px);
+               
+            }
+            &Item {
+                width: calc(33.3% - 19px);
 
-                    &__image {
-                        padding-bottom: 64%;
-                        margin-bottom: unset;
-                    }
+                &__image {
+                    padding-bottom: 64%;
+                    margin-bottom: unset;
                 }
             }
 

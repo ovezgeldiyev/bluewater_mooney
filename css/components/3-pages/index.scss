@@ -260,97 +260,292 @@
     }
 }
 .faq {
-    &Item {
-        margin-bottom: 27px;
+  &Item {
+    margin-bottom: 27px;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &__button {
-            padding: 10px 28px;
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            background-color: $primary;
-            color: $white;
-            cursor: pointer;
-            &.tabBtn {
-                &.active {
-                    span {
-                        transform: translateY(-50%) rotate(180deg);
-                    }
-                }
-            }
-            &-text {
-                display: flex;
-                justify-content: space-between;
-                width: 80%;
-            }
-
-            span {
-                width: 40px;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                top: 50%;
-                right: 23px;
-                transform: translateY(-50%);
-                transition: .3s ease;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
-            }
-        }
-
-        &__content {
-            background-color: $lightBlue;
-            &.tabEvent {
-                display: none;
-                transition: .6s ease;
-                padding: 106px 28px 20px;
-
-                &.active {
-                    display: block;
-
-                }
-            }
-            &-info {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 166px;
-
-                p {
-                    width: calc(50% - 20px);
-                    max-width: 670px;
-                    font-weight: 300;
-                    letter-spacing: 0.5px;
-                }
-
-                &-image {
-                    width: calc(50% - 20px);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-right: -28px;
-
-                    img {
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                }
-            }
-
-            h2 {
-                margin-bottom: 74px;
-            }
-        }
-
-    
+    &:last-child {
+      margin-bottom: 0;
     }
+
+    &__button {
+      padding: 10px 28px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      background-color: $primary;
+      color: $white;
+      cursor: pointer;
+      &.tabBtn {
+        &.active {
+          span {
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+      }
+      &-text {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+      }
+      p {
+        &:last-child {
+          margin-left: 15px;
+        }
+      }
+
+      span {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        right: 23px;
+        transform: translateY(-50%);
+        transition: 0.3s ease;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &__content {
+      background-color: $lightBlue;
+      padding: 106px 28px 20px;
+
+      &.tabEvent {
+        display: none;
+        transition: 0.6s ease;
+
+        &.active {
+          display: block;
+        }
+      }
+      &-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 166px;
+
+        p {
+          width: calc(50% - 20px);
+          max-width: 670px;
+          font-weight: 300;
+          letter-spacing: 0.5px;
+        }
+
+        &-image {
+          width: calc(50% - 20px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: -28px;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      h2 {
+        margin-bottom: 74px;
+      }
+    }
+  }
+}
+// 1180px
+@mixin faq-xlg-xxlg {
+  .faq {
+    &Item {
+      &__content {
+        padding-top: 80px;
+        &-info {
+          margin-bottom: 130px;
+        }
+      }
+    }
+  }
+}
+
+// 1024px
+@mixin faq-lg-xlg {
+  .faq {
+    &Item {
+      &__button {
+        span {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}
+// 930px
+@mixin faq-md-lg {
+  .faq {
+    &Item {
+      &__content {
+        padding: 60px 15px 20px;
+        h2 {
+          margin-bottom: 50px;
+        }
+        &-info {
+            margin-bottom: 100px;
+          P {
+            width: calc(50% - 5px);
+            font-size: 16px;
+            line-height: 24px;
+          }
+          &-image {
+            width: calc(50% - 5px);
+            margin-right: -15px;
+          }
+        }
+      }
+    }
+  }
+}
+// 840px
+@mixin faq-md-lg-extra {
+  .faq {
+    &Item {
+      &__content {
+        &-info {
+          margin-bottom: 70px;
+
+          p {
+            font-size: 15px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 750px
+@mixin faq-sm-md {
+  .faq {
+    &Item {
+      &__content {
+        padding-top: 50px;
+
+        &-info {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            &-image {
+              order: -1;
+              width: 100%;
+              max-width: unset;
+              margin: 0 0 20px 0;
+            }
+            p {
+              width: 100%;
+              font-size: 16px;
+              line-height: 22px;
+            }
+          }
+      }
+    }
+  }
+}
+// 650px
+@mixin faq-sm-md-extra {
+  .faq {
+    &Item {
+      &__button {
+        padding: 8px 20px;
+        &-text {
+          width: 85%;
+        }
+        p {
+          font-size: 17px;
+          line-height: 24px;
+        }
+        span {
+          width: 30px;
+          height: 30px;
+          right: 15px;
+        }
+      }
+      &__content {
+        padding-top: 30px;
+        &-info {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 40px;
+          &-image {
+            order: -1;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 0 20px 0;
+          }
+          p {
+            width: 100%;
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+// 540px
+@mixin faq-xsm-sm {
+  .faq {
+    &Item {
+      &__button {
+        padding: 6px 10px;
+        p {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        span{
+            width: 25px;
+            height: 25px;
+            right: 12px;
+        }
+      }
+      margin-bottom: 15px;
+      &__content {
+        padding: 10px 15px 0;
+        h2 {
+            margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+// 390px
+@mixin faq-xxxsm-xxsm {
+  .faq {
+    &Item {
+        &__button{
+            p{
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+      &__content {
+          padding: 30px 15px 10px;
+        h2 {
+          margin-bottom: 20px;
+        }
+        &-info {
+          p {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
 }
