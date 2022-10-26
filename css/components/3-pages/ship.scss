@@ -1,14 +1,13 @@
 .intro {
     &__inner {
         padding-top: 100px;
-
         &-info {
             display: flex;
             align-items: flex-end;
             padding: 12px 15px 25px;
             background-color: $gray;
             margin-bottom: 50px;
-
+            
             h2 {
                 margin-bottom: 42px;
             }
