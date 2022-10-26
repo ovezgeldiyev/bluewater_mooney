@@ -683,9 +683,16 @@ table tbody tr:after {
   color: #fff;
   cursor: pointer;
 }
+.faqItem__button.tabBtn {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
 .faqItem__button.tabBtn.active span {
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
+}
+.faqItem__button.tabBtn:hover {
+  opacity: 0.9;
 }
 .faqItem__button-text {
   display: -webkit-box;

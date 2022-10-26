@@ -278,10 +278,14 @@
       color: $white;
       cursor: pointer;
       &.tabBtn {
+        transition: .3s ease;
         &.active {
           span {
             transform: translateY(-50%) rotate(180deg);
           }
+        }
+        &:hover {
+          opacity: .9;
         }
       }
       &-text {
