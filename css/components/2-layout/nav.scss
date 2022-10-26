@@ -89,11 +89,12 @@
         position: absolute;
         top: calc(100% + 8px);
         left: 0;
-        width: 100%;
+        width: 110%;
         color: $white;
         &.close {
             opacity: 0;
             transition: .3s ease;
+            left: -7%;
         }
     }
     &::after {
@@ -111,17 +112,19 @@
     }
     &.active {
         &::before {
+            width: 125%;
             top: 50%;
-            -webkit-transform: translate(-50%, -50%) rotate(45deg);
-            transform: translate(-50%, -50%) rotate(45deg);
+            -webkit-transform: translate(-50%, -50%) rotate(35deg);
+            transform: translate(-50%, -50%) rotate(35deg);
         }
         span {
             opacity: 0;
         }
         &::after {
+            width: 125%;
             bottom: 50%;
-            -webkit-transform: translate(-50%, 50%) rotate(-45deg);
-            transform: translate(-50%, 50%) rotate(-45deg);
+            -webkit-transform: translate(-50%, 50%) rotate(-35deg);
+            transform: translate(-50%, 50%) rotate(-35deg);
         }
         p{ 
             opacity: 0;
@@ -170,14 +173,24 @@
     .nav {
         &__inner {
             a {
-                font-size: 17px;
-                line-height: 20px;
+                font-size: 15px;
+                line-height: 18px;
+            }
+            li {
+                margin-bottom: 5px;
             }
         }
     }
 }
-// 540px
-@mixin nav-xsm-sm {
+// 500px max-height
+@mixin nav-xsm-sm-h {
     .nav {
+        &__inner {
+            position: unset;
+            transform: translate(0);
+            margin: 170px auto 50px;
+            height: 170px;
+            padding: 0;
+        }
     }
 }

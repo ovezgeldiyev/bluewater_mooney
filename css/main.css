@@ -416,13 +416,14 @@ table tbody tr:after {
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
-  width: 100%;
+  width: 110%;
   color: #fff;
 }
 .burger p.close {
   opacity: 0;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  left: -7%;
 }
 .burger::after {
   bottom: 0%;
@@ -442,17 +443,19 @@ table tbody tr:after {
   border-radius: 3px;
 }
 .burger.active::before {
+  width: 125%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(35deg);
+  transform: translate(-50%, -50%) rotate(35deg);
 }
 .burger.active span {
   opacity: 0;
 }
 .burger.active::after {
+  width: 125%;
   bottom: 50%;
-  -webkit-transform: translate(-50%, 50%) rotate(-45deg);
-  transform: translate(-50%, 50%) rotate(-45deg);
+  -webkit-transform: translate(-50%, 50%) rotate(-35deg);
+  transform: translate(-50%, 50%) rotate(-35deg);
 }
 .burger.active p {
   opacity: 0;
@@ -1053,8 +1056,21 @@ table tbody tr:after {
 }
 @media (max-height: 600px) {
   .nav__inner a {
-    font-size: 17px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .nav__inner li {
+    margin-bottom: 5px;
+  }
+}
+@media (max-height: 500px) {
+  .nav__inner {
+    position: unset;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    margin: 170px auto 50px;
+    height: 170px;
+    padding: 0;
   }
 }
 @media (max-width: 750px) {

@@ -98,6 +98,11 @@
     @content;
   }
 }
+@mixin xsm-sm-h {
+  @media (max-height: 500px) {
+    @content;
+  }
+}
 @mixin sm-md-h-extra {
   @media (max-height: 600px) {
     @content;

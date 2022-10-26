@@ -95,6 +95,10 @@
 @include sm-md-h-extra {
     @include nav-sm-md-h-extra;
 }
+// 500px max-height
+@include xsm-sm-h {
+  @include nav-xsm-sm-h;
+}
 // 750px
 @include sm-md {
   .gallery {
