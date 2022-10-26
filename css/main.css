@@ -198,8 +198,8 @@ table tbody tr:after {
   transition: 0.4s ease;
 }
 .galleryItem__image:hover img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .galleryItem a {
   color: #000;
