@@ -219,6 +219,23 @@ table tbody tr:after {
   margin-bottom: unset;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header {
   position: absolute;
   top: 0;
@@ -746,6 +763,10 @@ table tbody tr:after {
 }
 .faqItem__content.tabEvent.active {
   display: block;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 .faqItem__content-info {
   display: -webkit-box;

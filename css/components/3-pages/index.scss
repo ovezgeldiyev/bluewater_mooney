@@ -331,6 +331,8 @@
 
         &.active {
           display: block;
+          animation-name: fadeIn;
+          animation-duration: .6s;
         }
       }
       &-info {
