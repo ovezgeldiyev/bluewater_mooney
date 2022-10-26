@@ -1,11 +1,11 @@
 // menu start
-var menu = document.getElementById("menu");
-var menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menuBtn");
 const headerLogo = document.getElementById("headerLogo");
 const heroLogo = document.getElementById("heroLogo");
 const hero = document.getElementById("hero");
 
-var body = document.body;
+const body = document.body;
 menuBtn.onclick = function () {
   menu.classList.toggle("active");
   menuBtn.classList.toggle("active");

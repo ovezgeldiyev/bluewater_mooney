@@ -672,6 +672,9 @@ table tbody tr:after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   background-color: #006483;
   color: #fff;
@@ -688,6 +691,9 @@ table tbody tr:after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 80%;
 }
 .faqItem__button p:last-child {
@@ -899,7 +905,7 @@ table tbody tr:after {
   }
 
   .auto__container {
-    padding: 0 25px;
+    padding: 0 20px;
   }
 
   .list {
@@ -1053,10 +1059,13 @@ table tbody tr:after {
 }
 @media (max-width: 750px) {
   .gallery__row {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
   .gallery .galleryItem {
     width: calc(33.3% - 5px);
+  }
+  .gallery .galleryItem__image {
+    margin-bottom: 5px;
   }
   .gallery .galleryItem a {
     font-size: 12px;
@@ -1235,10 +1244,6 @@ table tbody tr:after {
     line-height: 22px;
   }
 
-  .auto__container {
-    padding: 0 20px;
-  }
-
   .gallery__row {
     margin-bottom: 0;
   }
@@ -1247,11 +1252,11 @@ table tbody tr:after {
   }
   .gallery .galleryItem {
     width: 100%;
-    max-width: 400px;
+    max-width: unset;
     margin: 0 auto 15px;
   }
   .gallery .galleryItem:last-child {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
   .gallery h3 {
     padding: 7px 15px;
@@ -1355,7 +1360,7 @@ table tbody tr:after {
     right: 12px;
   }
   .faqItem__content {
-    padding: 10px 15px 0;
+    padding: 15px 15px 0;
   }
   .faqItem__content h2 {
     margin-bottom: 30px;
@@ -1411,7 +1416,7 @@ table tbody tr:after {
     line-height: 20px;
   }
   .faqItem__content {
-    padding: 30px 15px 10px;
+    padding: 15px 15px 0;
   }
   .faqItem__content h2 {
     margin-bottom: 20px;
