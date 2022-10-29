@@ -28,6 +28,8 @@ window.onclick = function (event) {
     body.classList.remove("active");
   }
 };
+
+
 // menu end
 // faq start
 const tabBtn = document.querySelectorAll(".tabBtn");
@@ -41,7 +43,6 @@ function onTabClick(tabBtns, tabItems, item) {
     let tabId = currentBtn.getAttribute("data-tab");
     let currentTab = document.querySelector(tabId);
     if (currentBtn.classList.contains("active")) {
-      console.log("now active");
       const faq = currentBtn.parentElement.querySelector(".tabEvent");
       if (faq) {
         faq.classList.remove("active");
@@ -57,6 +58,10 @@ function onTabClick(tabBtns, tabItems, item) {
       });
       currentBtn.classList.add("active");
       currentTab.classList.add("active");
+
+      let currentTabTop = document.querySelector(".tabBtn.active");
+      currentTabTop.scrollIntoView();
+     
     }
   });
 }
